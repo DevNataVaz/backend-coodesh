@@ -1,5 +1,6 @@
+require('dotenv').config();
 const express = require('express');
-const productRoutes = require('./routes/productRoutes');
+const productRoutes = require('./routes/routes');
 const connectDB = require('./config/db');
 const syncProducts = require('./cron/syncProducts');
 
@@ -13,7 +14,7 @@ app.use('/products', productRoutes);
 
 app.get('/', (req, res) => {
     res.json({
-        message: "API executada! 🚀.",
+        message: "API executada! ✅",
         
     });
 });
