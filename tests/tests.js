@@ -5,7 +5,7 @@ const Product = require('../src/models/product');
 
 describe('Product API', () => {
     beforeAll(async () => {
-        await mongoose.connect(process.env.MONGO_URI);
+        await mongoose.connect(process.env.MONGODB_URI);
     });
 
     afterAll(async () => {
@@ -29,5 +29,5 @@ describe('Product API', () => {
         await Product.deleteOne({ code: '12345' });
     });
 
-    // Outros testes para PUT e DELETE
+    
 });
